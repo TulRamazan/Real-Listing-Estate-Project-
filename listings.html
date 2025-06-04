@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listings - Real Estate Listings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" xintegrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="listings.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-blue-500 shadow-md rounded-b-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-white text-xl font-semibold">Real Estate Listings</a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="homepage.html" class="text-gray-200 hover:text-white transition-colors duration-300">Home</a></li>
+                    <li><a href="addlisting.html" class="text-gray-200 hover:text-white transition-colors duration-300">Add listing</a></li>
+                    <li><a href="listings.html" class="text-gray-200 hover:text-white transition-colors duration-300">Listings</a></li>
+                    <li><a href="agents.html" class="text-gray-200 hover:text-white transition-colors duration-300">Agents</a></li>
+                    <li><a href="contacts.html" class="text-gray-200 hover:text-white transition-colors duration-300">Contact</a></li>
+                    <li><a href="aboutus.html" class="text-gray-200 hover:text-white transition-colors duration-300">About Us</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <button id="theme-toggle-btn" class="text-white focus:outline-none ml-4" aria-label="Toggle Theme">
+                <i id="theme-icon" class="fas fa-sun text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-50">
+        <div class="bg-gray-800 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="homepage.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Home</a></li>
+                    <li><a href="addlisting.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Add listing</a></li>
+                    <li><a href="listings.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Listings</a></li>
+                    <li><a href="agents.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Agents</a></li>
+                    <li><a href="contacts.html" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700">
+                        Contacts
+                    </a></li>
+                    <li><a href="aboutus.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Listings Section -->
+        <section id="listings-section">
+            <h1 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Featured Listings</h1>
+
+            <!-- Search Bar -->
+            <div class="mb-8">
+                <form id="search-form" class="flex flex-col md:flex-row gap-4 items-center">
+                    <input type="text" id="search-query" placeholder="Enter city, address, or ZIP code..." class="flex-grow px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    <select id="filter-type" class="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="all">All Types</option>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
+                    <select id="filter-price" class="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="any">Any Price</option>
+                        <option value="0-200000">$0 - $200,000</option>
+                        <option value="200000-400000">$200,000 - $400,000</option>
+                        <option value="400000-600000">$400,000 - $600,000</option>
+                        <option value="600000-1000000">$600,000 - $1,000,000</option>
+                        <option value="1000000+">$1,000,000+</option>
+                    </select>
+                    <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+                        <i class="fas fa-search mr-2"></i>Search
+                    </button>
+                </form>
+            </div>
+
+            <!-- Listings Grid -->
+            <div id="listings-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Listings will be added here by JavaScript -->
+            </div>
+
+            <!-- Pagination -->
+            <div id="pagination" class="flex justify-center mt-8">
+                <button id="prev-page" class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 rounded-md mr-2 focus:outline-none focus:ring-2 focus:ring-gray-200 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    <i class="fas fa-chevron-left mr-1"></i> Prev
+                </button>
+                <div id="page-numbers" class="flex items-center space-x-2">
+                    <!-- Page numbers will be added here by JavaScript -->
+                </div>
+                <button id="next-page" class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 rounded-md ml-2 focus:outline-none focus:ring-2 focus:ring-gray-200 disabled:opacity-50 disabled:cursor-not-allowed">
+                    Next <i class="fas fa-chevron-right ml-1"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Details Section -->
+        <section id="details-section" class="hidden">
+            <h1 id="details-title" class="text-3xl font-semibold text-gray-800 mb-6 text-center"></h1>
+            <div class="bg-white rounded-lg shadow-md p-8 max-w-4xl mx-auto">
+                <img id="details-image" src="" alt="Property Image" class="w-full h-96 object-cover rounded-md mb-6" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/333333?text=Property+Image';">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-blue-500 mb-3">Property Overview</h2>
+                        <p class="text-gray-700 mb-2"><i class="fas fa-map-marker-alt mr-2"></i>Location: <span id="details-location"></span></p>
+                        <p class="text-gray-700 mb-2"><i class="fas fa-bed mr-2"></i>Bedrooms: <span id="details-bedrooms"></span></p>
+                        <p class="text-gray-700 mb-2"><i class="fas fa-bath mr-2"></i>Bathrooms: <span id="details-bathrooms"></span></p>
+                        <p class="text-3xl font-bold text-green-500 mt-4">Price: $<span id="details-price"></span></p>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-semibold text-blue-500 mb-3">Description</h2>
+                        <p id="details-description" class="text-gray-600 leading-relaxed"></p>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-8">
+                    <button id="back-to-listings" class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-6 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-200">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Listings
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-4 text-center rounded-t-lg shadow-md">
+        <div class="container mx-auto px-4">
+            &copy; 2023 Real Estate Listings. All rights reserved.
+        </div>
+    </footer>
+   <script src="./js/contacts.js"></script>
+    <script src="listings.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Agents - Real Estate Listings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style(agents)/style.css">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-500 shadow-md rounded-b-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-white text-xl font-semibold">Real Estate Listings</a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="homepage.html" class="text-gray-200 hover:text-white transition-colors duration-300">Home</a></li>
+                    <li><a href="addlisting.html" class="text-gray-200 hover:text-white transition-colors duration-300">Add listing</a></li>
+                    <li><a href="listings.html" class="text-gray-200 hover:text-white transition-colors duration-300">Listings</a></li>
+                    <li><a href="agents.html" class="text-gray-200 hover:text-white transition-colors duration-300">Agents</a></li>
+                    <li><a href="contacts.html" class="text-gray-200 hover:text-white transition-colors duration-300">Contact</a></li>
+                    <li><a href="aboutus.html" class="text-gray-200 hover:text-white transition-colors duration-300">About Us</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <button id="theme-toggle-btn" class="text-white focus:outline-none ml-4" aria-label="Toggle Theme">
+                <i id="theme-icon" class="fas fa-sun text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-50">
+        <div class="bg-gray-800 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="homepage.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Home</a></li>
+                    <li><a href="addlisting.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Add listing</a></li>
+                    <li><a href="listings.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Listings</a></li>
+                    <li><a href="agents.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Agents</a></li>
+                    <li><a href="contacts.html" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700">
+                        Contacts
+                    </a></li>
+                    <li><a href="aboutus.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Our Agents</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="./image/Raul Menendez.webp" alt="Agent Raul Menendez" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-blue-500 mb-2">Raul Menendez</h2>
+                    <p class="text-gray-700 mb-2">Email: raul.menendez@example.com</p>
+                    <p class="text-gray-700 mb-4">Phone: (555) 111-2222</p>
+                    <p class="text-gray-600">Specialties: Strategic Investments, Luxury Properties</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="./image/Joe Anderson.jpg" alt="Agent Joe Anderson" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-blue-500 mb-2">Joe Anderson</h2>
+                    <p class="text-gray-700 mb-2">Email: joe.anderson@example.com</p>
+                    <p class="text-gray-700 mb-4">Phone: (555) 333-4444</p>
+                    <p class="text-gray-600">Specialties: Residential Rentals, Family Homes</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="./image/Michael Page.jpg" alt="Agent Michael Page" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-blue-500 mb-2">Michael Page</h2>
+                    <p class="text-gray-700 mb-2">Email: michael.page@example.com</p>
+                    <p class="text-gray-700 mb-4">Phone: (555) 777-8888</p>
+                    <p class="text-gray-600">Specialties: Commercial Leasing, Market Analytics</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-800 text-gray-300 py-4 text-center rounded-t-lg shadow-md">
+        <div class="container mx-auto px-4">
+            &copy; 2023 Real Estate Listings. All rights reserved.
+        </div>
+    </footer>
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+     <script src="agents.js"></script>
+</body>
+</html>

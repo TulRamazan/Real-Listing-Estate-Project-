@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Real Estate Listings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style(Untitled-1)/style.css">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-500 shadow-md rounded-b-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-white text-xl font-semibold">Real Estate Listings</a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="homepage.html" class="text-gray-200 hover:text-white transition-colors duration-300">Home</a></li>
+                    <li><a href="addlisting.html" class="text-gray-200 hover:text-white transition-colors duration-300">Add listing</a></li>
+                    <li><a href="listings.html" class="text-gray-200 hover:text-white transition-colors duration-300">Listings</a></li>
+                    <li><a href="agents.html" class="text-gray-200 hover:text-white transition-colors duration-300">Agents</a></li>
+                    <li><a href="contacts.html" class="text-gray-200 hover:text-white transition-colors duration-300">Contact</a></li>
+                    <li><a href="aboutus.html" class="text-gray-200 hover:text-white transition-colors duration-300">About Us</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <button id="theme-toggle-btn" class="text-white focus:outline-none ml-4" aria-label="Toggle Theme">
+                <i id="theme-icon" class="fas fa-sun text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-50">
+        <div class="bg-gray-800 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="homepage.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Home</a></li>
+                    <li><a href="addlisting.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Add listing</a></li>
+                    <li><a href="listings.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Listings</a></li>
+                    <li><a href="agents.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Agents</a></li>
+                    <li><a href="contacts.html" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700">
+                        Contacts
+                    </a></li>
+                    <li><a href="aboutus.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-semibold text-gray-800 mb-6 text-center">About Us</h1>
+
+        <div class="bg-white rounded-lg shadow-md p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl font-semibold text-blue-500 mb-4">Our Story</h2>
+                    <p class="text-gray-700 mb-4">
+                        For over 50 years, Team LBR has specialized in the sales, rental, and property management of single-family and multi-family homes in Detroit.
+                        We are committed to the revitalization of our home, one of America's greatest cities.
+                    </p>
+                    <p class="text-gray-700">
+                        Whether you are a renter, home buyer, or looking for an investment property, put the expertise of Team LBR to work for you!
+                    </p>
+                </div>
+                <div>
+                    <img src="image/Neurodiversity-Event-scaled.webp" style="width: 100%; height: 100%; object-fit: cover; display: block;"alt="Team LBR Office" class="rounded-md w-full">
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <h2 class="text-2xl font-semibold text-blue-500 mb-4 text-center">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Available Properties for Sale or Rent</h3>
+                        <p class="text-gray-600">
+                            Looking for a home to rent or buy? Count on Team LBR to help you find the perfect match.
+                            Browse our current listings of Detroit Homes for Sale and Detroit Homes for Rent.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Detroit Investment Properties</h3>
+                        <p class="text-gray-600">
+                            Invest in Detroit.  Team LBR can locate the investment property right for your portfolio.
+                            We provide our clients with expert, professional guidance through your investment.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Detroit Property Management</h3>
+                        <p class="text-gray-600">
+                            With over 50 years of real estate expertise, Team LBR is one of the leading real estate teams in the Detroit marketplace.
+                            We provide our clients with expert, professional guidance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-800 text-gray-300 py-4 text-center rounded-t-lg shadow-md">
+        <div class="container mx-auto px-4">
+            &copy; 2023 Real Estate Listings. All rights reserved.
+        </div>
+    </footer>
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <script src="aboutus.js"></script>
+</body>
+</html>

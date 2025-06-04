@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Property - Real Estate Listings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" xintegrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="sellyourproperty.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="bg-blue-500 shadow-md rounded-b-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-white text-xl font-semibold">Real Estate Listings</a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="homepage.html" class="text-gray-200 hover:text-white transition-colors duration-300">Home</a></li>
+                    <li><a href="addlisting.html" class="text-gray-200 hover:text-white transition-colors duration-300">Add listing</a></li>
+                    <li><a href="listings.html" class="text-gray-200 hover:text-white transition-colors duration-300">Listings</a></li>
+                    <li><a href="agents.html" class="text-gray-200 hover:text-white transition-colors duration-300">Agents</a></li>
+                    <li><a href="contacts.html" class="text-gray-200 hover:text-white transition-colors duration-300">Contact</a></li>
+                    <li><a href="aboutus.html" class="text-gray-200 hover:text-white transition-colors duration-300">About Us</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <button id="theme-toggle-btn" class="text-white focus:outline-none ml-4" aria-label="Toggle Theme">
+                <i id="theme-icon" class="fas fa-sun text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-50">
+        <div class="bg-gray-800 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="homepage.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Home</a></li>
+                    <li><a href="addlisting.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Add listing</a></li>
+                    <li><a href="listings.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Listings</a></li>
+                    <li><a href="agents.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">Agents</a></li>
+                    <li><a href="contacts.html" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded hover:bg-blue-700">
+                        Contacts
+                    </a></li>
+                    <li><a href="aboutus.html" class="block text-gray-200 hover:text-white transition-colors duration-300 text-lg">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Sell Your Property</h1>
+
+        <div class="bg-white rounded-lg shadow-md p-8 max-w-2xl mx-auto">
+            <p class="text-gray-700 mb-6 text-center">
+                Fill out the form below to get started with selling your property. Our agents will contact you shortly.
+            </p>
+            <form id="sell-property-form" class="space-y-6">
+                <div>
+                    <label for="seller-name" class="block text-gray-700 text-sm font-bold mb-2">
+                        Your Name:<span class="required-asterisk">*</span>
+                    </label>
+                    <input type="text" id="seller-name" name="seller-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500" placeholder="Your Full Name" required>
+                    <p id="seller-name-error" class="error-message hidden">Your Name is required.</p>
+                </div>
+
+                <div>
+                    <label for="seller-email" class="block text-gray-700 text-sm font-bold mb-2">
+                        Your Email:<span class="required-asterisk">*</span>
+                    </label>
+                    <input type="email" id="seller-email" name="seller-email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500" placeholder="your.email@example.com" required>
+                    <p id="seller-email-error" class="error-message hidden">Your Email is required.</p>
+                </div>
+
+                <div>
+                    <label for="seller-phone" class="block text-gray-700 text-sm font-bold mb-2">
+                        Your Phone Number:
+                    </label>
+                    <input type="tel" id="seller-phone" name="seller-phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500" placeholder="e.g., (123) 456-7890">
+                </div>
+
+                <div>
+                    <label for="property-address" class="block text-gray-700 text-sm font-bold mb-2">
+                        Property Address:<span class="required-asterisk">*</span>
+                    </label>
+                    <input type="text" id="property-address" name="property-address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500" placeholder="e.g., 123 Main St, Anytown, CA" required>
+                    <p id="property-address-error" class="error-message hidden">Property Address is required.</p>
+                </div>
+
+                <div>
+                    <label for="property-type" class="block text-gray-700 text-sm font-bold mb-2">
+                        Property Type:<span class="required-asterisk">*</span>
+                    </label>
+                    <select id="property-type" name="property-type" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500" required>
+                        <option value="">Select Type</option>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="land">Land</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <p id="property-type-error" class="error-message hidden">Property Type is required.</p>
+                </div>
+
+                <div>
+                    <label for="desired-price" class="block text-gray-700 text-sm font-bold mb-2">
+                        Desired Selling Price ($):
+                    </label>
+                    <input type="number" id="desired-price" name="desired-price" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500" min="0">
+                </div>
+
+                <div>
+                    <label for="property-details" class="block text-gray-700 text-sm font-bold mb-2">
+                        Additional Property Details:<span class="required-asterisk">*</span>
+                    </label>
+                    <textarea id="property-details" name="property-details" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500" placeholder="e.g., Number of bedrooms, bathrooms, unique features, lot size, etc." required></textarea>
+                    <p id="property-details-error" class="error-message hidden">Additional Property Details are required.</p>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-green-400">
+                        Submit Property for Sale
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-4 text-center rounded-t-lg shadow-md">
+        <div class="container mx-auto px-4">
+            &copy; 2023 Real Estate Listings. All rights reserved.
+        </div>
+    </footer>
+   <script src = "sellyourproperty.js"></script>
+</body>
+</html>
