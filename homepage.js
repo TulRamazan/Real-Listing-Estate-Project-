@@ -6,6 +6,9 @@ const hamburgerBtn = document.getElementById("hamburger-btn");
 
         let isDarkMode = false;
 
+// Display welcome alert once on initial load of the home page
+            alert("Welcome to the Real Listing estate website!");
+
         // Function to toggle dark mode
         function toggleDarkMode() {
             isDarkMode = !isDarkMode;
